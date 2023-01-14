@@ -1,72 +1,19 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>QR Code Reader</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
     <div id="qr-scanner">
         <video id="qr-video"></video>
         <button id="qr-start-scanning-button" onclick="startScanning()">Start Scanning</button>
         <button id="qr-stop-scanning-button" onclick="stopScanning()">Stop Scanning</button>
     </div>
 
-    <script src="qrcode-reader.min.js"></script>
-    <script>
-        var qr = new QCodeDecoder();
-        var video = document.getElementById("qr-video");
-        var startScanningButton = document.getElementById("qr-start-scanning-button");
-        var stopScanningButton = document.getElementById("qr-stop-scanning-button");
-
-        function startScanning() {
-            qr.decodeFromCamera(video, function (er, result) {
-                var id = result;
-                console.log("ID: " + id);
-            });
-            startScanningButton.style.display = "none";
-            stopScanningButton.style.display = "block";
-        }
-
-        function stopScanning() {
-            qr.stop();
-            startScanningButton.style.display = "block";
-            stopScanningButton.style.display = "none";
-        }
-    </script>
-    <style>
-        #qr-scanner {
-            width: 300px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        #qr-video {
-            width: 100%;
-        }
-
-        #qr-start-scanning-button,
-        #qr-stop-scanning-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        #qr-start-scanning-button:hover,
-        #qr-stop-scanning-button:hover {
-            opacity: 0.8;
-        }
-
-        #qr-stop-scanning-button {
-            display: none;
-        }
-    </style>
-
+    <script src="./main.js"></script>
 </body>
-
 </html>

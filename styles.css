@@ -1,0 +1,30 @@
+#qr-scanner {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#qr-video {
+    width: 100%;
+}
+
+#qr-start-scanning-button,
+#qr-stop-scanning-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#qr-start-scanning-button:hover,
+#qr-stop-scanning-button:hover {
+    opacity: 0.8;
+}
+
+#qr-stop-scanning-button {
+    display: none;
+}
+
